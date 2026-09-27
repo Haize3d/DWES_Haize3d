@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Formulario de inscripción</title>
+        <link rel="stylesheet" href="formato.css"/>
+    </head>
+    <body>
+        <form id="editar_alumno" method="POST" action="procesar_formularioo.php">
+            <h4>Editar alumno</h4>
+            <label>ID:</label>
+            <input type="string" id="id_alumno" name="id_alumno" required/>
+            <label>Nombre:</label>
+            <input type="string" id="nombre" name="nombre" required/>
+            <label>Apellidos:</label>
+            <div>
+                <input type="string" id="apellido1" name="apellido1" required/>
+                <input type="string" id="apellido2" name="apellido2" required/>
+            </div>
+            <label>Fecha de nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento" required/>
+            <label>Curso en el que está matriculado:</label>
+            <select id="curso" name="curso" required>
+                <option value="1">1º</option>
+                <option value="2">2º</option>
+                <option value="3">3º</option>
+                <option value="4">4º</option>
+            </select>
+            <label>Email de educamos</label>
+            <input type="email" id="email" name="email" required/>
+            <label>Contraseña de educamos</label>
+            <input type="password" id="password" name="password" required/>
+            <div>
+                <input type="submit" value="E L I M I N A R" id="eliminar" name="eliminar"/>
+                <input type="submit" value="Editar" id="editar" name="editar"/>
+            </div>
+        </form>
+
+        <form id="add_alumno" method="POST" action="procesar_formularioo.php">
+            <h4>Añadir alumno</h4>
+            <label>Nombre:</label>
+            <input type="string" id="nombre" name="nombre" required/>
+            <label>Apellidos:</label>
+            <div>
+                <input type="string" id="apellido1" name="apellido1" required/>
+                <input type="string" id="apellido2" name="apellido2" required/>
+            </div>
+            <label>Fecha de nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento" required/>
+            <label>Curso en el que está matriculado:</label>
+            <select id="curso" name="curso required>
+                <option value="1">1º</option>
+                <option value="2">2º</option>
+                <option value="3">3º</option>
+                <option value="4">4º</option>
+            </select>
+            <label>Email de educamos</label>
+            <input type="email" id="email" name="email" required/>
+            <label>Contraseña de educamos</label>
+            <input type="password" id="password" name="password" required/>
+            <div>
+                <input type="reset" value="Limpiar" id="limpiar" name="limpiar"/>
+                <input type="submit" value="Inscribir" id="inscribir" name="inscribir"/>
+            </div>
+        </form>
+
+        <form id="ver_alumno" method="POST" action="procesar_formularioo.php">
+            <h4>Ver alumnos</h4>
+            <input type="submit" value="Cargar lista" id="ver" name="ver"/>
+        </form>
+    </body>
+</html>
