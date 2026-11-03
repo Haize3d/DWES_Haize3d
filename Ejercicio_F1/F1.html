@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>F1</title>
+        <link rel="stylesheet" href="f1.css"/>
+    </head>
+    <body>
+        <form id="formulario_gestion" method="get" action="gestion_monoplazas.php">
+            <label>Nombre del piloto</label>
+            <input type="text" id="nombrePiloto" name="nombrePiloto" required>
+            <label>Número del monoplaza</label>
+            <input type="number" id="numeroMonoplaza" name="numeroMonoplaza" required>
+            <label>Escudería a la que pertenece</label>
+            <input type="text" id="escuderia" name="escuderia" required>
+            <label>Puntos en la categoría</label>
+            <input type="number" id="pts" name="pts" required>
+            <label>Categoría</label>
+            <div class="radios">
+                <label>F4</label>
+                <input type="radio" id="F4" name="categoria" checked>
+                <label>F3</label>
+                <input type="radio" id="F3" name="categoria">
+                <label>F2</label>
+                <input type="radio" id="F2" name="categoria">
+                <label>F1</label>
+                <input type="radio" id="F1" name="categoria">
+                <label>FAcademy</label>
+                <input type="radio" id="FA" name="categoria">
+            </div>
+            <label>País / Nombre academia / ¿Superlicencia? / Patrocinador / Potencia máxima</label>
+            <input type="text" id="paisCategoria" name="paisCategoria" required>
+            <label>Posición en parrilla</label>
+            <input type="number" id="posicionParrilla" name="posicionParrilla" required>
+            <div class="radios">
+                <label>¿Vuelta rápida?</label>
+                <input type="checkbox" id="vueltaRapida" name="vueltaRapida">
+            </div>
+            <div id="botones">
+                <input type="submit" value="Gestión monoplazas" id="boton_gestion" name="boton_gestion"/>
+                <input type="reset" id="borrar" name="borrar"/>
+            </div>
+        </form>
+        <form if="formulario_api" method="get" action="api_f1.php">
+            <input type="submit" value="API" id="boton_api" name="boton_api"/>
+        </form>
+        <p></p>
+        <!--script>
+            function createInput(type)
+            {
+                var input = document.createElement('input');
+                input.type = type;
+
+                return input;
+            }
+        </script-->
+    </body>
+</html>
