@@ -2,7 +2,7 @@
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-        CURLOPT_URL => "https://api.openf1.org/v1/car_data",
+        CURLOPT_URL => "https://api.openf1.org/v1/car_data?driver_number=16",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_ENCODING => "",
@@ -23,6 +23,8 @@
     } else {
         $objeto = json_decode($response);
 
+        echo "Piloto 16: ".$objeto->data->driver_number[15]."</br>";
+        echo "Piloto 44: ".$objeto->data->driver_number[44]."</br>";
         /*echo "COVID19 en ".$objeto->data->covid19Stats[0]->country."<br/>";
         echo "Actualizado: ".$objeto->data->covid19Stats[0]->lastUpdate."<br/>";
         echo "Confirmados: ".$objeto->data->covid19Stats[0]->confirmed."<br/>";
